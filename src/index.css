@@ -9,10 +9,13 @@ body {
     justify-content: center;
 }
 
-.app {
-    width: 37.5rem;
-    text-align: center;
-}
+.container {
+    width: 100%;
+    max-width: 480px; /* Typical width for mobile */
+    margin: 0 auto; /* Centering it on larger screens */
+    padding: 15px; /* Give it some space from the edges */
+  }
+  
 
 h1 {
     font-size: 2.5rem;
