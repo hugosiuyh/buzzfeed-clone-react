@@ -11,7 +11,7 @@ const AnswerBlock = ({answerOptions, chosenAnswers,nicki}, ref) => {
     'emo_onika': 0, 
     'roman_zolanski': 0, 
     'barbie': 0 });
-    // console.log(chosenAnswers,'chosenAnswers')
+    
     // move this to question block later 
     useEffect(() => {
         if (chosenAnswers.every(item => item !== null)) { // chosen answer Items??
@@ -34,7 +34,6 @@ const AnswerBlock = ({answerOptions, chosenAnswers,nicki}, ref) => {
                     newScores[nicki] += answerScores[nicki];
                 });
             });
-            console.log(newScores,'newScores')
             setScores(newScores);  // Update the scores state
 
             // find maximum and go back to answers
@@ -42,10 +41,8 @@ const AnswerBlock = ({answerOptions, chosenAnswers,nicki}, ref) => {
                 (!max || score > max[1]) ? [nicki, score] : max, 
                 null)[0];
 
-            console.log(maxNicki, answerOptions)
-            console.log(nicki)
             setResult(nicki[maxNicki])
-            console.log(result)
+
         }
     }, [result]);
 
